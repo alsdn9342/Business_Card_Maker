@@ -10,14 +10,13 @@ function App({ authService }) {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-           <Login authService={authService} />
+           <Login authService = {authService} />
           </Route>
           <Route path="/maker">
-            <Maker authService={authService} />
+            <Maker authService = {authService} />
           </Route>
         </Switch>
-      </BrowserRouter>
-      
+      </BrowserRouter>    
     </div>
   );
 }

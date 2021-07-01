@@ -10,9 +10,10 @@ const Login = ({authService}) => {
     const goToMaker = userId => {
         history.push({
             pathname:'/maker',
-            state: { id:userId} // insert uid for each login method, Google and Github.
+            state: { id: userId} // insert uid for each login method, Google and Github.
         });
     };
+
     const onLogin = event => {
        authService
        .login(event.currentTarget.textContent)
@@ -34,10 +35,10 @@ const Login = ({authService}) => {
                 <ul className={styles.list}>
                     <li className={styles.item}>
                         <button className={styles.button} onClick={onLogin}>Google</button>
-                        </li>
+                    </li>
                     <li className={styles.item}>
                         <button className={styles.button} onClick={onLogin}>Github</button>
-                        </li>
+                    </li>
                 </ul>
             </section>
             <Footer />
