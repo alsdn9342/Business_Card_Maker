@@ -7,7 +7,7 @@ const CardReview = ({cards}) =>
         <ul className={styles.cards}>
         {
             cards.map(card => (
-                <Card card={card} />
+                <Card key={card.id} card={card} />
               ))
         }
         </ul>

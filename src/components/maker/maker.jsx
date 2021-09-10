@@ -50,13 +50,18 @@ const Maker = ({authService}) => {
                history.push('/');
             }
         });
-    })
+    });
+
+   const addCard = (card) => {
+      const updated = [...cards, card];
+      setCards(updated);
+    }
     return (
         <section className={styles.maker}>
             <Header onLogout = {onLogout}  />
             <div className={styles.container}>
-                <CardMaker cards={cards} className={styles.cardMaker} />
-                <CardReview cards={cards} className={styles.cardReview} />
+                <CardMaker cards={cards} addCard={addCard}  />
+                <CardReview cards={cards}  />
             </div>
             <Footer />
 
